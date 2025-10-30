@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos sociais</title>
+
+    <link rel="stylesheet" href="CSS Projeto/Projeto.css">
+</head>
+<body>
+
+  <script src="projetos.js"></script>
+
+
+<header>
+    <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <nav class="menu">
+    <ul>
+      <li><a href="#">Início</a></li>
+      <li><a href="#">Projetos</a></li>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+  </nav>
+    <h1>Projetos Sociais da ONG Sempre-Vivas</h1>
+    <p>Transformando vidas por meio da preservação e da cultura</p>
+    <img src="Imagens Projetos/Imagem boque sempre vivas.jpg" alt="Boque Sempre Viva" 
+    width="500">
+    <img src="Imagens Projetos/Logo 01.png" alt="Logo"width="200">
+  </header>
+
+  <section>
+    <h2>Nossos Projetos</h2>
+    <ul>
+      <li><strong>Educação Ambiental:</strong> Oficinas e palestras em escolas da região sobre a importância das plantas sempre-vivas e da conservação do Cerrado.</li>
+      <li><strong>Valorização dos Apanhadores:</strong> Apoio às comunidades tradicionais com capacitação, infraestrutura e reconhecimento cultural.</li>
+      <li><strong>Artesanato Sustentável:</strong> Incentivo à produção de arranjos e peças artesanais com flores sempre-vivas, gerando renda e preservando saberes locais.</li>
+      <li><strong>Jovens Guardiões do Cerrado:</strong> Programa de formação para adolescentes em práticas de conservação e empreendedorismo verde.</li>
+      <li><strong>Mapeamento Ecológico:</strong> Parcerias com universidades para estudar e proteger os campos rupestres da Serra do Espinhaço.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Participe</h2>
+    <p>A importancia de fazer doações para preservar nossa cultura e meio ambiente. </p>
+    <p>Você pode apoiar nossos projetos como voluntário, parceiro ou doador. Juntos, fortalecemos a biodiversidade e a cultura de Minas Gerais.</p>
+  </section>
+
+  <img src="Imagens Projetos/Arranjo SF.jpg" alt="Arranjo" width="500">
+  <section>
+    <h2>Por que sua doação é importante?</h2>
+    <p>
+      As plantas sempre-vivas do Cerrado mineiro são símbolo de resistência, beleza e tradição. A ONG Sempre-Vivas atua na proteção dessas espécies e no apoio às comunidades que vivem do extrativismo sustentável, especialmente na Serra do Espinhaço.
+    </p>
+    <p>
+      Com sua doação, você contribui para projetos de educação ambiental, valorização cultural, geração de renda e conservação da biodiversidade. Cada gesto de apoio fortalece o Cerrado e as pessoas que o protegem.
+    </p>
+    <p>
+      <strong>Doe esperança. Doe preservação. Doe cultura. Faça o Bem.</strong>
+    </p>
+    <a href="#" class="botao-doar">Fazer uma Doação</a>
+  </section>
+
+  <footer>
+    &copy; 2025 ONG Sempre-Vivas do Cerrado Mineiro. Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const botaoDoar = document.querySelector(".botao-doar");
+
+  botaoDoar.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    // Verifica se o campo já foi inserido
+    if (document.getElementById("dados-doacao")) return;
+
+    // Cria o bloco de informações
+    const bloco = document.createElement("div");
+    bloco.id = "dados-doacao";
+    bloco.style.marginTop = "30px";
+    bloco.style.padding = "20px";
+    bloco.style.border = "1px solid #ccc";
+    bloco.style.borderRadius = "8px";
+    bloco.style.backgroundColor = "#f5f5f5";
+
+    bloco.innerHTML = `
+      <h3>Dados para Doação</h3>
+      <p><strong>Banco:</strong> Banco do Brasil</p>
+      <p><strong>Agência:</strong> 1234-5</p>
+      <p><strong>Conta Corrente:</strong> 98765-4</p>
+      <p><strong>Chave Pix:</strong> <em>contato@ongsemprevivas.br</em></p>
+      <p>Você pode fazer sua doação via transferência bancária ou Pix. Agradecemos seu apoio à preservação do Cerrado!</p>
+    `;
+
+    // Insere o bloco após o botão
+    botaoDoar.parentNode.insertBefore(bloco, botaoDoar.nextSibling);
+  });
+});
+</script>
+
